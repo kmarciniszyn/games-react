@@ -12,5 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${({ theme }) => theme.colors.site.background};
         color: ${({ theme }) => theme.colors.textPrimary};
+        font-family: 'Raleway', sans-serif;
     }
 `;
