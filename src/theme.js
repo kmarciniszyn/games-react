@@ -22,7 +22,7 @@ const common = {
     breakpoints: {
         maxMobileWidth: 767,
     },
-    boxShadow: `inset -4px -4px 15px -2px ${colors.silver}`,
+    boxShadow: `inset -4px -4px 15px -2px ${colors.pampas}`,
 }
 
 export const lightTheme = {
@@ -37,8 +37,10 @@ export const lightTheme = {
         section: {
             background: colors.semiTransparentWhite,
             borderBottom: colors.black,
-            select: colors.black,
-            selectText: colors.white,
+        },
+        select: {
+            background: colors.black,
+            text: colors.white,
         },
         button: {
             background: colors.black,
