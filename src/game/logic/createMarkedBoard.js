@@ -13,6 +13,20 @@ const howManyMines = (coordinates, minedBoard) => {
     return mineCounter;
 };
 
+const addMinesToNumbersBoard = (board, minedBoard, boardSize) => {
+    let newBoard = [...board];
+
+    for (let x = 0; x<boardSize; x++){
+        for (let y = 0; y<boardSize; y++){
+            if(minedBoard[x][y] === "x"){
+                newBoard[x][y] = "x";
+            }
+        }
+    }
+
+    return newBoard;
+};
+
 export const createMarkedBoard = (minedBoard, boardSize) => {
     const markedBoard = [];
     let row = [];
@@ -80,5 +94,7 @@ export const createMarkedBoard = (minedBoard, boardSize) => {
 
     markedBoard.push(row);
 
-    return markedBoard;
+    const finalMarkedBoard = addMinesToNumbersBoard(markedBoard,minedBoard,boardSize);
+
+    return finalMarkedBoard;
 };
