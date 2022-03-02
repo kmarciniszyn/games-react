@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
 import { Normalize } from "styled-normalize";
+import MinesweeperPage from "./minesweeper/MinesweeperPage";
 import { lightTheme } from "./theme";
 import { GlobalStyle } from "./globalStyle";
 import store from "./store";
@@ -11,6 +12,7 @@ function App() {
       <ThemeProvider theme={lightTheme}>
         <Normalize />
         <GlobalStyle />
+        <MinesweeperPage />
       </ThemeProvider>
     </Provider>
   );
