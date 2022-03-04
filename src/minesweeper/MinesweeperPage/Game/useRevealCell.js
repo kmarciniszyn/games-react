@@ -3,7 +3,8 @@ import {
     selectBoardSize,
     selectStateBoard,
     updateStateBoard,
-    endGame
+    endGame,
+    updateGameStatus
 } from "../../minesweeperSlice";
 
 const useRevealCell = () => {
@@ -63,6 +64,7 @@ const useRevealCell = () => {
 
         } else if (stateBoard[index].text === "x") {
             dispatch(endGame());
+            dispatch(updateGameStatus("lose"));
 
         } else {
             dispatch(updateStateBoard(id));
