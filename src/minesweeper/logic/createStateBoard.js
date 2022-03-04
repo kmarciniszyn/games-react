@@ -15,6 +15,7 @@ export default (boardSize, minesNumber) => {
                 y: y,
                 disabled: false,
                 clicked: false,
+                flagged: false,
                 text: markedBoard[x][y],
             });
         }
