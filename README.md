@@ -1,4 +1,22 @@
-# Minesweeper
+# Games Platform
+In this project you will find a various games, for example minesweeper.
+I'm still developing it.
+
+Available games:
+- [minesweeper](##Minesweeper)
+
+## Demo
+
+## Technologies
+- React
+- Create React App
+- React-Redux
+- Reduxjs-Toolkit
+- Styled Components
+- Custom Hook
+## Minesweeper
+
+In this game you have to find out where all the mines are and mark them.
 
 ## Available Scripts
 
