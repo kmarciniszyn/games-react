@@ -9,7 +9,7 @@ const minesweeperSlice = createSlice({
         stateBoard: [],
         flaggedCellsNumber: 0,
         score: 0,
-        gameStatus: "game",
+        gameStatus: "initial",
     },
     reducers: {
         updateMinesNumber: (state, { payload: minesNumber }) => {

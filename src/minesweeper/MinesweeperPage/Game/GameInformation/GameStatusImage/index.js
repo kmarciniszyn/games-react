@@ -7,6 +7,8 @@ import winSunImage from "./images/winSun.png";
 export default ({ gameStatus }) => {
 
     switch (gameStatus) {
+        case "initial":
+            return <Image src={happySunImage} alt="happy sun" />;
         case "game":
             return <Image src={happySunImage} alt="happy sun" />;
         case "win":
