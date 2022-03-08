@@ -51,6 +51,7 @@ export const lightTheme = {
                 background: colors.nobel,
                 text: colors.lightGray,
             },
+            background: colors.semiTransparentWhite,
             oneNeighbour: colors.blue,
             twoNeighbours: colors.darkGreen,
             threeNeighbours: colors.red,

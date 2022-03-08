@@ -1,10 +1,46 @@
-import styled, { css } from "styled-components";
-import mine from "./mine.png";
+import styled, { css, keyframes } from "styled-components";
+import flagImage from "./images/flag.png";
+import flowersGif from "./images/flowers.gif";
+
+const rotate = keyframes`
+    0% {
+        transform: scale(0.5);
+    }
+    20%{
+        transform: scale(0.9);
+    }
+    40%{
+        transform: scale(0.5);
+    }
+    60%{
+        transform: scale(0.9);
+    }
+    80% {
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+`;
+
+export const Section = styled.section`
+    background-color: ${({ theme }) => theme.colors.game.background};
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+`;
 
 export const Wrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(${({ size }) => size}, 1fr);
-    padding: 20px;
+    padding: 10px;
+`;
+
+export const MineImage = styled.img`
+    height: 50px;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: ${rotate};
 `;
 
 export const Button = styled.button`
@@ -21,9 +57,15 @@ export const Button = styled.button`
         box-shadow: none;
     `}
 
-    ${({ mined }) => mined && css`
-        background-color: ${({ theme }) => theme.colors.primary};
-        background-image: url(${mine});
+    ${({ flagged }) => flagged && css`
+        background-image: url(${flagImage});
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    `}
+
+    ${({ flowers }) => flowers && css`
+        background-image: url(${flowersGif});
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
