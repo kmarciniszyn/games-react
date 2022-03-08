@@ -34,6 +34,7 @@ const minesweeperSlice = createSlice({
         },
         endGame: state => {
             state.isGame = false;
+            state.gameStatus = "lose";
 
             // reveal all the cells
             state.stateBoard.map(item => {
