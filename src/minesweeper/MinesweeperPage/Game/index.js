@@ -9,7 +9,7 @@ import {
 import useRevealCell from "./useRevealCell";
 import mineImage from "./images/mine.png";
 import useToggleFlagCell from "./useToggleFlagCell";
-
+import GameInformation from "./GameInformation";
 
 export default () => {
     const boardSize = useSelector(selectBoardSize);
@@ -26,6 +26,7 @@ export default () => {
 
     return (
         <Section>
+            <GameInformation />
             <Wrapper size={boardSize}>
                 {
                     stateBoard.map(item => (
