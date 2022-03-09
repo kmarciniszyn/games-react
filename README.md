@@ -7,6 +7,8 @@ Available games:
 
 ## Demo
 
+You can try this app [here](https://kmarciniszyn.github.io/games-react/)
+
 ## Technologies
 - React
 - Create React App
