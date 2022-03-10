@@ -10,6 +10,7 @@ const minesweeperSlice = createSlice({
         flaggedCellsNumber: 0,
         score: 0,
         gameStatus: "initial",
+        seconds: 0,
     },
     reducers: {
         updateMinesNumber: (state, { payload: minesNumber }) => {
@@ -31,6 +32,7 @@ const minesweeperSlice = createSlice({
             state.flaggedCellsNumber = 0;
             state.score = 0;
             state.gameStatus = "game";
+            state.seconds = 0;
         },
         endGame: state => {
             state.isGame = false;
@@ -64,6 +66,9 @@ const minesweeperSlice = createSlice({
         updateGameStatus: (state, { payload: newStatus }) => {
             state.gameStatus = newStatus;
         },
+        incrementSeconds: state => {
+            state.seconds++;
+        },
     },
 });
 
@@ -76,6 +81,7 @@ export const selectStateBoard = state => selectMinesweeperState(state).stateBoar
 export const selectFlaggedCellsNumber = state => selectMinesweeperState(state).flaggedCellsNumber;
 export const selectScore = state => selectMinesweeperState(state).score;
 export const selectGameStatus = state => selectMinesweeperState(state).gameStatus;
+export const selectSeconds = state => selectMinesweeperState(state).seconds;
 
 export const {
     updateMinesNumber,
@@ -88,7 +94,8 @@ export const {
     decrementScore,
     unflagCell,
     flagCell,
-    updateGameStatus
+    updateGameStatus,
+    incrementSeconds
 } = minesweeperSlice.actions;
 
 export default minesweeperSlice.reducer;
