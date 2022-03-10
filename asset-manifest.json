@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.js": "/games-react/static/js/main.b93b1b07.js",
+    "main.js": "/games-react/static/js/main.7f2db9b4.js",
     "static/js/787.94585327.chunk.js": "/games-react/static/js/787.94585327.chunk.js",
     "static/media/flowers.gif": "/games-react/static/media/flowers.954a1a5f17956b289100.gif",
     "static/media/happySun.png": "/games-react/static/media/happySun.0ec227a1ca7b9dff1a88.png",
     "static/media/winSun.png": "/games-react/static/media/winSun.1e777a4963b42d2a438e.png",
     "static/media/sadSun.png": "/games-react/static/media/sadSun.a6166f80fcd697612005.png",
     "static/media/mine.png": "/games-react/static/media/mine.617628e7786a7b5ce363.png",
+    "static/media/watch.png": "/games-react/static/media/watch.36281f4dcdb477742cda.png",
     "static/media/flag.png": "/games-react/static/media/flag.3ee4759d89c75cef3dda.png",
     "index.html": "/games-react/index.html",
-    "main.b93b1b07.js.map": "/games-react/static/js/main.b93b1b07.js.map",
+    "main.7f2db9b4.js.map": "/games-react/static/js/main.7f2db9b4.js.map",
     "787.94585327.chunk.js.map": "/games-react/static/js/787.94585327.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.b93b1b07.js"
+    "static/js/main.7f2db9b4.js"
   ]
 }
