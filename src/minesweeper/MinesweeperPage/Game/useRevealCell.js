@@ -39,9 +39,9 @@ const useRevealCell = () => {
         if (stateBoard[index].text === 0) {
             revealedCells.push(id);
 
-            // if (!stateBoard[index].flagged) {
+            if (!stateBoard[index].flagged) {
                 dispatch(updateStateBoard(id));
-            // }
+            }
 
             revealedCells = markNearlyZero(x, y, revealedCells);
 
@@ -53,9 +53,9 @@ const useRevealCell = () => {
         } else {
             revealedCells.push(id);
 
-            // if (!stateBoard[index].flagged) {
+            if (!stateBoard[index].flagged) {
                 dispatch(updateStateBoard(id));
-            // }
+            }
 
             return revealedCells;
         }
