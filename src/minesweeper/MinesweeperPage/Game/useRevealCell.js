@@ -14,19 +14,19 @@ const useRevealCell = () => {
 
     const markNearlyZero = (x, y, revealedCells) => {
 
-        revealedCells = markIfZero(x + 1, y + 1, revealedCells);
-        revealedCells = markIfZero(x + 1, y, revealedCells);
-        revealedCells = markIfZero(x + 1, y - 1, revealedCells);
-        revealedCells = markIfZero(x, y - 1, revealedCells);
-        revealedCells = markIfZero(x, y + 1, revealedCells);
-        revealedCells = markIfZero(x - 1, y + 1, revealedCells);
-        revealedCells = markIfZero(x - 1, y, revealedCells);
-        revealedCells = markIfZero(x - 1, y - 1, revealedCells);
+        revealedCells = markIfNotMined(x + 1, y + 1, revealedCells);
+        revealedCells = markIfNotMined(x + 1, y, revealedCells);
+        revealedCells = markIfNotMined(x + 1, y - 1, revealedCells);
+        revealedCells = markIfNotMined(x, y - 1, revealedCells);
+        revealedCells = markIfNotMined(x, y + 1, revealedCells);
+        revealedCells = markIfNotMined(x - 1, y + 1, revealedCells);
+        revealedCells = markIfNotMined(x - 1, y, revealedCells);
+        revealedCells = markIfNotMined(x - 1, y - 1, revealedCells);
 
         return revealedCells;
     };
 
-    const markIfZero = (x, y, revealedCells) => {
+    const markIfNotMined = (x, y, revealedCells) => {
         if (x < 0 || y < 0 || x >= boardSize || y >= boardSize) return revealedCells;
 
         const id = `x${x}y${y}`;
