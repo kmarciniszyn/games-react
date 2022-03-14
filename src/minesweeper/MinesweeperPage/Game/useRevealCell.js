@@ -32,33 +32,22 @@ const useRevealCell = () => {
         const id = `x${x}y${y}`;
         const index = stateBoard.findIndex(item => item.id === id);
 
-        if (revealedCells.includes(id)) return revealedCells;
+        if (revealedCells.includes(id)
+            || stateBoard[index].clicked === true
+            || stateBoard[index].text === "x")
+            return revealedCells;
 
-        if (stateBoard[index].clicked === true) return revealedCells;
+        revealedCells.push(id);
+
+        if (!stateBoard[index].flagged) {
+            dispatch(updateStateBoard(id));
+        }
 
         if (stateBoard[index].text === 0) {
-            revealedCells.push(id);
-
-            if (!stateBoard[index].flagged) {
-                dispatch(updateStateBoard(id));
-            }
-
             revealedCells = markNearlyZero(x, y, revealedCells);
-
-            return revealedCells;
-
-        } else if (stateBoard[index].text === "x") {
-            return revealedCells;
-
-        } else {
-            revealedCells.push(id);
-
-            if (!stateBoard[index].flagged) {
-                dispatch(updateStateBoard(id));
-            }
-
-            return revealedCells;
         }
+
+        return revealedCells;
     };
 
     return (id, x, y) => {
