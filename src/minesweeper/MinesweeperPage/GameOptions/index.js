@@ -14,11 +14,11 @@ import createStateBoard from '../../logic/createStateBoard';
 import StyledButton from "../../../common/StyledButton/styled";
 import SectionOptionsGame from "../../../common/SectionOptionsGame";
 import StyledSelect from "../../../common/StyledSelect/styled";
+import { minesweeperName } from "../../../gamesNames";
 
 export default () => {
     const dispatch = useDispatch();
     const isGame = useSelector(selectIsGame);
-
     const minesNumber = useSelector(selectMinesNumber);
     const boardSize = useSelector(selectBoardSize);
 
@@ -34,6 +34,7 @@ export default () => {
 
     return (
         <SectionOptionsGame
+            gameName={minesweeperName}
             bodyContent={
                 <>
                     <label>
@@ -76,6 +77,5 @@ export default () => {
                 </>
             }
         />
-
     )
 };

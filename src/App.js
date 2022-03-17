@@ -1,21 +1,28 @@
-import { ThemeProvider } from "styled-components";
-import { Provider } from "react-redux";
-import { Normalize } from "styled-normalize";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
+import GameInstruction from "./common/GameInstruction";
 import MinesweeperPage from "./minesweeper/MinesweeperPage";
-import { lightTheme } from "./theme";
-import { GlobalStyle } from "./globalStyle";
-import store from "./store";
+import Navigation from "./Navigation";
+import { toMinesweeper, toInstruction } from "./routes";
 
-function App() {
-  return (
-    <Provider store={store}>
-      <ThemeProvider theme={lightTheme}>
-        <Normalize />
-        <GlobalStyle />
-        <MinesweeperPage />
-      </ThemeProvider>
-    </Provider>
-  );
-}
+
+const App = () => (
+    <HashRouter
+        basename="/games"
+    >
+        <Navigation />
+
+        <Switch>
+            <Route path={toMinesweeper()}>
+                <MinesweeperPage />
+            </Route>
+            <Route path={toInstruction()}>
+                <GameInstruction />
+            </Route>
+            <Route path="/games">
+                <Redirect to={toMinesweeper()} />
+            </Route>
+        </Switch>
+    </HashRouter>
+);
 
 export default App;

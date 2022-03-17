@@ -34,6 +34,10 @@ export const lightTheme = {
         site: {
             background: colors.pampas,
         },
+        navigation: {
+            background: colors.black,
+            text: colors.white
+        },
         section: {
             background: colors.semiTransparentWhite,
             borderBottom: colors.black,
