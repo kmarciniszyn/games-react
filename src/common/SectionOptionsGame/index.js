@@ -1,13 +1,14 @@
 import React from "react";
-import { Body, Header, Section, Title } from "./styled";
+import Section from "../Section";
+import { Body } from "./styled";
 
 export default ({ bodyContent }) => (
-    <Section>
-        <Header>
-            <Title>Opcje gry</Title>
-        </Header>
-        <Body>
-            {bodyContent}
-        </Body>
-    </Section>
+    <Section
+        title="Opcje gry"
+        bodyContent={
+            <Body>
+                {bodyContent}
+            </Body>
+        }
+    />
 );
