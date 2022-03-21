@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/games-react/static/js/main.7d049ead.js",
+    "main.js": "/games-react/static/js/main.d2983a65.js",
     "static/js/787.94585327.chunk.js": "/games-react/static/js/787.94585327.chunk.js",
     "static/media/flowers.gif": "/games-react/static/media/flowers.954a1a5f17956b289100.gif",
     "static/media/happySun.png": "/games-react/static/media/happySun.0ec227a1ca7b9dff1a88.png",
     "static/media/winSun.png": "/games-react/static/media/winSun.1e777a4963b42d2a438e.png",
     "static/media/sadSun.png": "/games-react/static/media/sadSun.a6166f80fcd697612005.png",
     "static/media/mine.png": "/games-react/static/media/mine.617628e7786a7b5ce363.png",
-    "static/media/watch.png": "/games-react/static/media/watch.36281f4dcdb477742cda.png",
-    "static/media/flag.png": "/games-react/static/media/flag.3ee4759d89c75cef3dda.png",
     "static/media/questionMark.svg": "/games-react/static/media/questionMark.e41d59dddcde34fd489a475f653955fa.svg",
     "index.html": "/games-react/index.html",
-    "main.7d049ead.js.map": "/games-react/static/js/main.7d049ead.js.map",
+    "static/media/flag.svg": "/games-react/static/media/flag.d3f701115cd2974aae85988b38a4b6c6.svg",
+    "static/media/watch.svg": "/games-react/static/media/watch.4b782cdb4a9620041fc8bb99fd004fab.svg",
+    "main.d2983a65.js.map": "/games-react/static/js/main.d2983a65.js.map",
     "787.94585327.chunk.js.map": "/games-react/static/js/787.94585327.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.7d049ead.js"
+    "static/js/main.d2983a65.js"
   ]
 }
