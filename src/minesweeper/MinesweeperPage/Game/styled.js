@@ -1,27 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
-import flagImage from "./images/flag.png";
-import flowersGif from "./images/flowers.gif";
-
-const rotate = keyframes`
-    0% {
-        transform: scale(0.5);
-    }
-    20%{
-        transform: scale(0.9);
-    }
-    40%{
-        transform: scale(0.5);
-    }
-    60%{
-        transform: scale(0.9);
-    }
-    80% {
-        transform: scale(0.8);
-    }
-    100%{
-        transform: scale(1);
-    }
-`;
+import styled, { css } from "styled-components";
 
 export const Section = styled.section`
     background-color: ${({ theme }) => theme.colors.game.background};
@@ -36,13 +13,6 @@ export const Wrapper = styled.div`
     padding: 10px;
 `;
 
-export const MineImage = styled.img`
-    height: 50px;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-name: ${rotate};
-`;
-
 export const Button = styled.button`
     cursor: pointer;
     height: 50px;
@@ -55,20 +25,6 @@ export const Button = styled.button`
 
     ${({ releved }) => releved && css`
         box-shadow: none;
-    `}
-
-    ${({ flagged }) => flagged && css`
-        background-image: url(${flagImage});
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    `}
-
-    ${({ flowers }) => flowers && css`
-        background-image: url(${flowersGif});
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
     `}
 
     ${({ number }) => number === 1 && css`
@@ -101,6 +57,11 @@ export const Button = styled.button`
 
     ${({ number }) => number === 8 && css`
         color: ${({ theme }) => theme.colors.game.eightNeighbours};`
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.maxMobileWidth}px){
+        font-size: 10px;
+        height: 20px;
     }
 
     &:disabled {

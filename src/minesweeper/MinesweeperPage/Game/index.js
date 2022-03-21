@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, MineImage, Section, Wrapper } from "./styled";
+import { Button, Section, Wrapper } from "./styled";
 import { useSelector } from "react-redux";
 import {
     selectBoardSize,
@@ -7,9 +7,9 @@ import {
     selectGameStatus
 } from "../../minesweeperSlice";
 import useRevealCell from "./useRevealCell";
-import mineImage from "./images/mine.png";
 import useToggleFlagCell from "./useToggleFlagCell";
 import GameInformation from "./GameInformation";
+import BoardItemContent from "./BoardItemContent";
 
 export default () => {
     const boardSize = useSelector(selectBoardSize);
@@ -36,15 +36,12 @@ export default () => {
                             onContextMenu={(event) => toggleFlag(event, item.id)}
                             disabled={item.disabled}
                             releved={item.clicked}
-                            flagged={item.flagged}
-                            flowers={(gameStatus === "win" && item.text === "x") ? true : false}
                             number={item.text}
                         >
-                            {(item.clicked && item.text !== "x") ? item.text : ""}
-                            {(gameStatus === "lose" && item.text === "x")
-                                ? <MineImage src={mineImage} alt="mine" />
-                                : ""
-                            }
+                            <BoardItemContent
+                                stateBoardItem={item}
+                                gameStatus={gameStatus}
+                            />
                         </Button>
                     ))
                 }
