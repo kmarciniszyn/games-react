@@ -41,6 +41,7 @@ export default () => {
                         wielkość planszy
                         <StyledSelect
                             name="boardSize"
+                            value={boardSize}
                             onChange={({ target }) => dispatch(updateBoardSize(target.value))}
                             disabled={isGame}
                         >
@@ -53,6 +54,7 @@ export default () => {
                         ilość min
                         <StyledSelect
                             name="minesNumber"
+                            value={minesNumber}
                             onChange={({ target }) => dispatch(updateMinesNumber(target.value))}
                             disabled={isGame}
                         >
