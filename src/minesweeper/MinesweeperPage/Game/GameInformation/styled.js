@@ -12,8 +12,10 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Image = styled.img`
-    height: 60px;
+export const ItemWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Paragraph = styled.p`

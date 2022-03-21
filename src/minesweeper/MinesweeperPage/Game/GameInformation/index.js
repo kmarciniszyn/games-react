@@ -7,10 +7,10 @@ import {
     selectIsGame,
     selectSeconds
 } from "../../../minesweeperSlice";
-import { Image, Wrapper, Paragraph } from "./styled";
+import { Wrapper, Paragraph, ItemWrapper } from "./styled";
 import GameStatusImage from "./GameStatusImage";
-import flag from "../images/flag.png";
-import watch from "./images/watch.png";
+import { StyledWatchIcon } from "./WatchIcon/styled";
+import { StyledFlagIcon } from "../FlagIcon/styled";
 
 export default () => {
     const gameStatus = useSelector(selectGameStatus);
@@ -39,11 +39,15 @@ export default () => {
 
     return (
         <Wrapper>
-            <Image src={watch} alt="watch" />
-            <Paragraph> {seconds} </Paragraph>
+            <ItemWrapper>
+                <StyledWatchIcon />
+                <Paragraph>{seconds}</Paragraph>
+            </ItemWrapper>
             <GameStatusImage gameStatus={gameStatus} />
-            <Image src={flag} alt="flag" />
-            <Paragraph> {flaggedCellsNumber}</Paragraph>
+            <ItemWrapper>
+                <StyledFlagIcon />
+                <Paragraph>{flaggedCellsNumber}</Paragraph>
+            </ItemWrapper>
         </Wrapper>
     )
 };
