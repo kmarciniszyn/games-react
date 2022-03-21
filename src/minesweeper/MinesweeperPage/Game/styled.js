@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(${({ size }) => size}, 1fr);
     padding: 10px;
+    overflow: scroll;
 `;
 
 export const Button = styled.button`
