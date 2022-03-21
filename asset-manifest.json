@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/games-react/static/js/main.d2983a65.js",
+    "main.js": "/games-react/static/js/main.37e9a074.js",
     "static/js/787.94585327.chunk.js": "/games-react/static/js/787.94585327.chunk.js",
     "static/media/flowers.gif": "/games-react/static/media/flowers.954a1a5f17956b289100.gif",
     "static/media/happySun.png": "/games-react/static/media/happySun.0ec227a1ca7b9dff1a88.png",
@@ -11,10 +11,10 @@
     "index.html": "/games-react/index.html",
     "static/media/flag.svg": "/games-react/static/media/flag.d3f701115cd2974aae85988b38a4b6c6.svg",
     "static/media/watch.svg": "/games-react/static/media/watch.4b782cdb4a9620041fc8bb99fd004fab.svg",
-    "main.d2983a65.js.map": "/games-react/static/js/main.d2983a65.js.map",
+    "main.37e9a074.js.map": "/games-react/static/js/main.37e9a074.js.map",
     "787.94585327.chunk.js.map": "/games-react/static/js/787.94585327.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d2983a65.js"
+    "static/js/main.37e9a074.js"
   ]
 }
