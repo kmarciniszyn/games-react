@@ -1,15 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
     align-items: center;
+    justify-items: center;
     padding: 10px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.maxMobileWidth}px){
-        justify-content: center;
-    }
 `;
 
 export const ItemWrapper = styled.div`
